@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Custom toast -->
+    <style name="successfulToast">
+        <item name="stTextColor">#fff</item>
+        <item name="stFont">@font/inter_regular</item>
+        <item name="stTextSize">15sp</item>
+        <item name="stColorBackground">@color/GreenPrimary</item>
+        <item name="stIconStart">@drawable/ic_checkbox_circle_line</item>
+        <item name="stRadius">30dp</item>
+    </style>
+
+    <style name="errorToast">
+        <item name="stTextColor">#fff</item>
+        <item name="stFont">@font/inter_regular</item>
+        <item name="stTextSize">15sp</item>
+        <item name="stColorBackground">@color/YellowPrimary</item>
+        <item name="stIconStart">@drawable/ic_error_warning_line</item>
+        <item name="stRadius">30dp</item>
+    </style>
+
+</resources>
