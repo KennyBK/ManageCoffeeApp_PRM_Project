@@ -54,10 +54,10 @@ public class CoffeeDB extends SQLiteOpenHelper {
             sqLiteDatabase.execSQL(insertBan, new Object[]{0});
         }
         String insertNguoiDung = "INSERT INTO NGUOIDUNG(maNguoiDung, hoVaTen, hinhAnh, ngaySinh, email, chucVu, gioiTinh, matKhau) VALUES(?, ?, ?, ?, ?, ?, ?, ?)";
-        sqLiteDatabase.execSQL(insertNguoiDung, new Object[]{"admin", "ADMIN", ImageToByte.drawableToByte(context, R.drawable.avatar_user_md), "2003-01-01", "admin@gmail.com", "Admin", "Nam", 1212});
-        sqLiteDatabase.execSQL(insertNguoiDung, new Object[]{"nhanvien", "Nguyễn Viết Tín", ImageToByte.drawableToByte(context, R.drawable.avatar_user_md), "2003-01-01", "tinthq@gmail.com", "NhanVien", "Nam", 1212});
-        sqLiteDatabase.execSQL(insertNguoiDung, new Object[]{"ND2", "Trần Hồ Quốc An", ImageToByte.drawableToByte(context, R.drawable.avatar_user_md), "2003-01-01", "anthq@gmail.com", "NhanVien", "Nam", 1212});
-        sqLiteDatabase.execSQL(insertNguoiDung, new Object[]{"ND3", "Hồ Minh Phú", ImageToByte.drawableToByte(context, R.drawable.avatar_user_md), "2003-01-01", "phuhm@gmail.com", "NhanVien", "Nam", 1212});
+        sqLiteDatabase.execSQL(insertNguoiDung, new Object[]{"admin", "ADMIN", ImageToByte.drawableToByte(context, R.drawable.avata_2), "2003-01-01", "admin@gmail.com", "Admin", "Nam", 1212});
+        sqLiteDatabase.execSQL(insertNguoiDung, new Object[]{"nhanvien", "Nguyễn Văn Duẩn", ImageToByte.drawableToByte(context, R.drawable.images_2), "2003-01-01", "duannv@gmail.com", "NhanVien", "Nam", 12345});
+        sqLiteDatabase.execSQL(insertNguoiDung, new Object[]{"ND2", "Nguyễn Tiến Đạt", ImageToByte.drawableToByte(context, R.drawable.lovepik_wh1200), "2003-01-01", "datnt@gmail.com", "NhanVien", "Nam", 1234});
+        sqLiteDatabase.execSQL(insertNguoiDung, new Object[]{"ND3", "Nguyễn Văn Dũng", ImageToByte.drawableToByte(context, R.drawable.pngtree_user_avatar_boy_png_image_4693645), "2003-01-01", "dungnv@gmail.com", "NhanVien", "Nam", 123321});
 
         String insertLoaiHang = "INSERT INTO LOAIHANG(hinhAnh, tenLoai) VALUES(?, ?)";
         sqLiteDatabase.execSQL(insertLoaiHang, new Object[]{ImageToByte.drawableToByte(context, R.drawable.sample_data_loai_hang_caphe), "Cà phê"});
@@ -90,7 +90,6 @@ public class CoffeeDB extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int oldVersion, int newVersion) {
         if (oldVersion != newVersion) {
-            sqLiteDatabase.execSQL("DROP TABLE IF EXISTS BAN");
             sqLiteDatabase.execSQL("DROP TABLE IF EXISTS NGUOIDUNG");
             sqLiteDatabase.execSQL("DROP TABLE IF EXISTS LOAIHANG");
             sqLiteDatabase.execSQL("DROP TABLE IF EXISTS HANGHOA");
