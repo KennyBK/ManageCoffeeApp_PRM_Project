@@ -19,4 +19,16 @@
         <item name="stRadius">30dp</item>
     </style>
 
+    <!--  Theme Status Bar Gray -->
+    <style name="AppStatusBarGray" parent="Base.Theme.ManageCoffeeApp_PRM_Project">
+        <item name="android:statusBarColor">@color/GrayPrimary</item>
+        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
+    </style>
+
+    <style name="MyDatePickerDialogTheme" parent="android:Theme.Material.Light.Dialog">
+        <item name="android:colorAccent">@color/GreenPrimary</item>
+
+        <!-- No need to override 'datePickerStyle' -->
+        <!-- <item name="android:datePickerStyle">@style/MyDatePickerStyle</item> -->
+    </style>
 </resources>
