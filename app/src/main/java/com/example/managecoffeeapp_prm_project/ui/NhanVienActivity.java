@@ -60,9 +60,28 @@ public class NhanVienActivity extends AppCompatActivity {
                 PopupMenu popup = new PopupMenu(NhanVienActivity.this, view);
                 popup.getMenuInflater()
                         .inflate(R.menu.menu_more_nhan_vien, popup.getMenu());
+
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.menu_chitet:
+                                openChiTietNhanVienActivity(nguoiDung);
+                                break;
+                        }
+                        return true;
+                    }
+                });
             }
         });
         recyclerViewNhanVien.setAdapter(nguoiDungAdapter);
+    }
+
+    private void openChiTietNhanVienActivity(NguoiDung nguoiDung) {
+        Intent intent = new Intent(NhanVienActivity.this, ChiTietNhanVienActivity.class);
+        intent.putExtra(MA_NGUOI_DUNG, nguoiDung.getMaNguoiDung());
+        startActivity(intent);
+        overridePendingTransition(R.anim.anim_in_right, R.anim.anim_out_left);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
