@@ -1,9 +1,13 @@
 package com.example.managecoffeeapp_prm_project.ui;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.PopupMenu;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -59,6 +63,20 @@ public class NhanVienActivity extends AppCompatActivity {
             }
         });
         recyclerViewNhanVien.setAdapter(nguoiDungAdapter);
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_add, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.menu_add) {
+            startActivity(new Intent(NhanVienActivity.this, ThemNhanVienActivity.class));
+            overridePendingTransition(R.anim.anim_in_right, R.anim.anim_out_left);
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
