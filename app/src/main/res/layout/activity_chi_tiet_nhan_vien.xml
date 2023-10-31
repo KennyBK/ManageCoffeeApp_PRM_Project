@@ -30,7 +30,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/bgr_chitiet_nv"
+                app:srcCompat="@drawable/bgr_coffee"
                 tools:ignore="ContentDescription" />
 
             <ImageView
@@ -63,7 +63,7 @@
                     android:id="@+id/civHinhAnh"
                     android:layout_width="110dp"
                     android:layout_height="110dp"
-                    android:src="@drawable/avatar_user_md"
+                    android:src="@drawable/avata_2"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"

@@ -18,8 +18,17 @@
 
         </activity>
         <activity
+            android:name=".ui.ThemNhanVienActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarWhite" />
+        <activity
+            android:name=".ui.ChiTietNhanVienActivity"
+            android:exported="false"
+            android:theme="@style/TranslucentStatusBar" />
+        <activity
             android:name=".ui.NhanVienActivity"
             android:exported="true">
+
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 

@@ -102,7 +102,7 @@ public class ThemNhanVienActivity extends AppCompatActivity implements View.OnCl
         NguoiDung nguoiDung = new NguoiDung();
         nguoiDung.setMaNguoiDung(maNguoiDung);
         nguoiDung.setHoVaTen(hoVaTen);
-        nguoiDung.setHinhAnh(ImageToByte.drawableToByte(ThemNhanVienActivity.this, R.drawable.avatar_user_md));
+        nguoiDung.setHinhAnh(ImageToByte.drawableToByte(ThemNhanVienActivity.this, R.drawable.avata_2));
         nguoiDung.setNgaySinh(XDate.toDate(ngaySinh));
         nguoiDung.setEmail(email);
         nguoiDung.setChucVu(NguoiDung.POSITION_STAFF);

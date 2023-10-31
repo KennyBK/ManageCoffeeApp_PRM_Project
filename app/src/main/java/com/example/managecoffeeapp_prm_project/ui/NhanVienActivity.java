@@ -65,15 +65,24 @@ public class NhanVienActivity extends AppCompatActivity {
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
+                            case R.id.menu_update:
+//                                openUpdateNhanVienActivity(nguoiDung);
+                                break;
+                            case R.id.menu_delete:
+//                                deleteNhanVien(nguoiDung);
+                                break;
                             case R.id.menu_chitet:
                                 openChiTietNhanVienActivity(nguoiDung);
                                 break;
                         }
-                        return true;
+                        return false;
                     }
                 });
+                popup.show();
             }
         });
+
+
         recyclerViewNhanVien.setAdapter(nguoiDungAdapter);
     }
 
@@ -82,6 +91,12 @@ public class NhanVienActivity extends AppCompatActivity {
         intent.putExtra(MA_NGUOI_DUNG, nguoiDung.getMaNguoiDung());
         startActivity(intent);
         overridePendingTransition(R.anim.anim_in_right, R.anim.anim_out_left);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(R.anim.anim_in_left, R.anim.anim_out_right);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -96,12 +111,6 @@ public class NhanVienActivity extends AppCompatActivity {
             overridePendingTransition(R.anim.anim_in_right, R.anim.anim_out_left);
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        overridePendingTransition(R.anim.anim_in_right, R.anim.anim_out_left);
     }
 
     @Override
