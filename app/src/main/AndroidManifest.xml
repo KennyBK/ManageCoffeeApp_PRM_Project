@@ -26,6 +26,10 @@
             android:exported="false"
             android:theme="@style/TranslucentStatusBar" />
         <activity
+            android:name=".ui.CapNhatNhanVienActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarWhite" />
+        <activity
             android:name=".ui.NhanVienActivity"
             android:exported="true">
 

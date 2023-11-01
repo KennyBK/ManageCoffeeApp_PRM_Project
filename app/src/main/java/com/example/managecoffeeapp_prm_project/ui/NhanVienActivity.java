@@ -66,7 +66,7 @@ public class NhanVienActivity extends AppCompatActivity {
                     public boolean onMenuItemClick(MenuItem item) {
                         switch (item.getItemId()) {
                             case R.id.menu_update:
-//                                openUpdateNhanVienActivity(nguoiDung);
+                                openUpdateNhanVienActivity(nguoiDung);
                                 break;
                             case R.id.menu_delete:
 //                                deleteNhanVien(nguoiDung);
@@ -84,6 +84,14 @@ public class NhanVienActivity extends AppCompatActivity {
 
 
         recyclerViewNhanVien.setAdapter(nguoiDungAdapter);
+    }
+
+
+    private void openUpdateNhanVienActivity(NguoiDung nguoiDung) {
+        Intent intent = new Intent(NhanVienActivity.this, CapNhatNhanVienActivity.class);
+        intent.putExtra(MA_NGUOI_DUNG, nguoiDung.getMaNguoiDung());
+        startActivity(intent);
+        overridePendingTransition(R.anim.anim_in_right, R.anim.anim_out_left);
     }
 
     private void openChiTietNhanVienActivity(NguoiDung nguoiDung) {
