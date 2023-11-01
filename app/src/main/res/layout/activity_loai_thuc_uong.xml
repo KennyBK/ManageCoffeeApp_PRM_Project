@@ -5,8 +5,8 @@
     android:id="@+id/layoutLoai"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/GrayPrimary">
-<!--    tools:context=".ui.LoaiThucUongActivity" -->
+    android:background="@color/GrayPrimary"
+    tools:context=".ui.LoaiThucUongActivity">
 
 
     <androidx.appcompat.widget.Toolbar
