@@ -1,24 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!--  Theme Status Bar white  -->
-    <style name="AppStatusBarWhite" parent="Theme.APTCOFFEE">
-        <item name="android:statusBarColor">@color/WhitePrimary</item>
-        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
-    </style>
-    <!--  Theme Status Bar Gray -->
-    <style name="AppStatusBarGray" parent="Theme.APTCOFFEE">
-        <item name="android:statusBarColor">@color/GrayPrimary</item>
-        <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
-    </style>
     <!--  Theme MainActivity-->
     <style name="MainActivityTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <item name="android:statusBarColor">@color/GrayPrimary</item>
         <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
-    </style>
-    <!--Font family bottomNavigationView-->
-    <style name="BottomNavigationViewTextStyle">
-        <item name="android:fontFamily">@font/inter_regular</item>
-        <item name="android:textSize">12sp</item>
     </style>
     <!-- Custom toast -->
     <style name="successfulToast">
@@ -34,18 +19,8 @@
         <item name="android:fontFamily">@font/inter_regular</item>
         <item name="android:textSize">12sp</item>
     </style>
-    <style name="TranslucentStatusBar" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:windowTranslucentStatus">true</item>
-    </style>
 
-    <style name="MyDatePickerDialogTheme" parent="android:Theme.Material.Light.Dialog">
-        <item name="android:colorAccent">@color/Brow1Primary</item>
-
-        <!-- No need to override 'datePickerStyle' -->
-        <!-- <item name="android:datePickerStyle">@style/MyDatePickerStyle</item> -->
-    </style>
-
-    <style name="AppStatusBarWhite" parent="Theme.ManageCoffeeApp_PRM_Project">
+    <style name="AppStatusBarWhite" parent="Base.Theme.ManageCoffeeApp_PRM_Project">
         <item name="android:statusBarColor">@color/WhitePrimary</item>
         <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
     </style>
@@ -77,8 +52,14 @@
 
     <style name="MyDatePickerDialogTheme" parent="android:Theme.Material.Light.Dialog">
         <item name="android:colorAccent">@color/GreenPrimary</item>
+        <item name="android:buttonBarNegativeButtonStyle">@style/MyDatePickerButtonStyle</item>
+        <item name="android:buttonBarPositiveButtonStyle">@style/MyDatePickerButtonStyle</item>
         <!-- No need to override 'datePickerStyle' -->
         <!-- <item name="android:datePickerStyle">@style/MyDatePickerStyle</item> -->
+    </style>
+
+    <style name="MyDatePickerButtonStyle" parent="Widget.MaterialComponents.Button.TextButton.Dialog">
+        <item name="android:textColor">@color/GreenPrimary</item>
     </style>
 
     <style name="AlertDialogTheme" parent="Base.Theme.AppCompat.Light.Dialog.Alert">

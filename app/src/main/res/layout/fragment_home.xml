@@ -108,13 +108,6 @@
                         android:layout_height="220dp" />
                 </androidx.cardview.widget.CardView>
 
-                <me.relex.circleindicator.CircleIndicator3
-                    android:id="@+id/circleIndicator3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="20dp"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    app:ci_drawable="@drawable/custom_indicator" />
             </LinearLayout>
 
             <TextView

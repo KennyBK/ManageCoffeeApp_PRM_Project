@@ -22,26 +22,22 @@ import java.util.ArrayList;
 import java.util.Objects;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-import fpt.edu.aptcoffee.MainActivity;
-import fpt.edu.aptcoffee.R;
-import fpt.edu.aptcoffee.adapter.PhotoAdapter;
-import fpt.edu.aptcoffee.adapter.ThucUongHomeFragmentAdapter;
-import fpt.edu.aptcoffee.dao.HangHoaDAO;
-import fpt.edu.aptcoffee.dao.NguoiDungDAO;
-import fpt.edu.aptcoffee.model.HangHoa;
-import fpt.edu.aptcoffee.model.NguoiDung;
-import fpt.edu.aptcoffee.model.Photo;
-import fpt.edu.aptcoffee.ui.LoaiThucUongActivity;
-import fpt.edu.aptcoffee.ui.NhanVienActivity;
-import fpt.edu.aptcoffee.ui.ThucUongActivity;
-import fpt.edu.aptcoffee.utils.MyToast;
-import me.relex.circleindicator.CircleIndicator3;
+import com.example.managecoffeeapp_prm_project.MainActivity;
+import com.example.managecoffeeapp_prm_project.R;
+import com.example.managecoffeeapp_prm_project.dao.HangHoaDAO;
+import com.example.managecoffeeapp_prm_project.dao.NguoiDungDAO;
+import com.example.managecoffeeapp_prm_project.model.HangHoa;
+import com.example.managecoffeeapp_prm_project.model.NguoiDung;
+import com.example.managecoffeeapp_prm_project.model.Photo;
+import com.example.managecoffeeapp_prm_project.ui.LoaiThucUongActivity;
+import com.example.managecoffeeapp_prm_project.ui.NhanVienActivity;
+import com.example.managecoffeeapp_prm_project.utils.MyToast;
+
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
     TextView tvHi;
     CircleImageView civHinhAnh;
     ViewPager2 vpSlideImage;
-    CircleIndicator3 indicator3;
     CardView cvLoai, cvThucUong, cvNhanVien;
     MainActivity mainActivity;
     NguoiDungDAO nguoiDungDAO;
@@ -55,14 +51,13 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         initView(view);
         initOnClickCard();
-        loadSlideImage();
 
         mainActivity = ((MainActivity) getActivity());
         nguoiDungDAO = new NguoiDungDAO(getContext());
         hangHoaDAO = new HangHoaDAO(getContext());
 
         welcomeUser();
-        loadListThucUong();
+
         autoRunSildeImage();
         return view;
     }
@@ -92,19 +87,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         });
     }
 
-    private void loadListThucUong() {
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
-        recyclerViewThucUong.setLayoutManager(linearLayoutManager);
-
-        // Lấy danh sách thức uống hiển thị trên recyclerView
-        ArrayList<HangHoa> listHangHoa = hangHoaDAO.getAll();
-        ThucUongHomeFragmentAdapter adapter = new ThucUongHomeFragmentAdapter(listHangHoa);
-        recyclerViewThucUong.setAdapter(adapter);
-    }
 
     private void initView(View view) {
         vpSlideImage = view.findViewById(R.id.vpSlideImage);
-        indicator3 = view.findViewById(R.id.circleIndicator3);
 
         cvLoai = view.findViewById(R.id.cardLoaiThucUong);
         cvThucUong = view.findViewById(R.id.cardThucUong);
@@ -123,14 +108,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     }
 
-    private void loadSlideImage() {
-        // Hiển thị Slide image
-        PhotoAdapter adapter = new PhotoAdapter(getListImage());
 
-        vpSlideImage.setAdapter(adapter);
-        vpSlideImage.setOffscreenPageLimit(2);
-        indicator3.setViewPager(vpSlideImage);
-    }
 
     @NonNull
     private ArrayList<Photo> getListImage() {
@@ -158,7 +136,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     private NguoiDung getNguoiDung() {
         // Lấy mã người dùng từ MainActivity thông qua hàm getKeyUser
-        String maNguoiDung = Objects.requireNonNull(mainActivity).getKeyUser();
+        String maNguoiDung = "admin";
+                //Objects.requireNonNull(mainActivity).getKeyUser();
         // Lây đối tượng người dùng theo mã
         return nguoiDungDAO.getByMaNguoiDung(maNguoiDung);
     }
@@ -175,8 +154,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.cardThucUong:
                 // Mở màng hình quản lý thức uống
-                startActivity(new Intent(getContext(), ThucUongActivity.class));
-                (requireActivity()).overridePendingTransition(R.anim.anim_in_right, R.anim.anim_out_left);
+
                 break;
             case R.id.cardNhanVien:
                 if (getNguoiDung().isAdmin()) {
@@ -196,6 +174,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onResume() {
         super.onResume();
         welcomeUser();
-        loadListThucUong();
+
     }
 }

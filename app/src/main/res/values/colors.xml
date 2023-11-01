@@ -18,7 +18,6 @@
     <color name="Gray1Primary">#B5B5B5</color>
     <color name="GreenPrimary">#1FB325</color>
     <color name="YellowPrimary">#FFC107</color>
-    <color name="Oranger">#F18E0E</color>
-    <?xml version="1.0" encoding="utf-8"?>
+    <color name="Orange">#F18E0E</color>
 
 </resources>

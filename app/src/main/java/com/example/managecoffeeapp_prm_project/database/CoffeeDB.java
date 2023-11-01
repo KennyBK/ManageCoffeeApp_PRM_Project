@@ -56,8 +56,6 @@ public class CoffeeDB extends SQLiteOpenHelper {
         sqLiteDatabase.execSQL(insertNguoiDung, new Object[]{"ND2", "Nguyễn Tiến Đạt", ImageToByte.drawableToByte(context, R.drawable.avatar_3), "2003-01-01", "datnt@gmail.com", "NhanVien", "Nam", 1234});
         sqLiteDatabase.execSQL(insertNguoiDung, new Object[]{"ND3", "Nguyễn Văn Dũng", ImageToByte.drawableToByte(context, R.drawable.pngtree_user_avatar_boy_png_image_4693645), "2003-01-01", "dungnv@gmail.com", "NhanVien", "Nam", 123321});
 
-
-
     }
 
     @Override
