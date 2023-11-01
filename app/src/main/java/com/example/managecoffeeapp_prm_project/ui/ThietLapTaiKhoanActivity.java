@@ -1,4 +1,4 @@
-package com.example.managecoffeeapp_prm_project.activity;
+package com.example.managecoffeeapp_prm_project.ui;
 
 import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
@@ -19,8 +19,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.managecoffeeapp_prm_project.fragment.SettingFragment;
 
 
 import de.hdodenhof.circleimageview.CircleImageView;

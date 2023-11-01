@@ -27,7 +27,7 @@ import com.example.managecoffeeapp_prm_project.MainActivity;
 import com.example.managecoffeeapp_prm_project.R;
 import com.example.managecoffeeapp_prm_project.dao.NguoiDungDAO;
 import com.example.managecoffeeapp_prm_project.model.NguoiDung;
-import com.example.managecoffeeapp_prm_project.activity.ThietLapTaiKhoanActivity;
+import com.example.managecoffeeapp_prm_project.ui.ThietLapTaiKhoanActivity;
 import com.example.managecoffeeapp_prm_project.utils.ImageToByte;
 import com.example.managecoffeeapp_prm_project.utils.MyToast;
 
