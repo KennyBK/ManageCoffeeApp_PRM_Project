@@ -11,14 +11,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.managecoffeeapp_prm_project.R;
-import com.example.managecoffeeapp_prm_project.interfaces.ItemNguoiDungOnClick;
-import com.example.managecoffeeapp_prm_project.model.NguoiDung;
-
 import java.util.ArrayList;
 
 import de.hdodenhof.circleimageview.CircleImageView;
-
+import com.example.managecoffeeapp_prm_project.R;
+import com.example.managecoffeeapp_prm_project.interfaces.ItemNguoiDungOnClick;
+import com.example.managecoffeeapp_prm_project.model.NguoiDung;
 
 public class NguoiDungAdapter extends RecyclerView.Adapter<NguoiDungAdapter.NguoiDungViewHodel>{
     ArrayList<NguoiDung> list;
@@ -28,6 +26,11 @@ public class NguoiDungAdapter extends RecyclerView.Adapter<NguoiDungAdapter.Nguo
         this.list = list;
         this.itemNguoiDungOnClick = itemNguoiDungOnClick;
     }
+
+    public NguoiDungAdapter(ArrayList<NguoiDung> list) {
+        this.list = list;
+    }
+
 
     @NonNull
     @Override
