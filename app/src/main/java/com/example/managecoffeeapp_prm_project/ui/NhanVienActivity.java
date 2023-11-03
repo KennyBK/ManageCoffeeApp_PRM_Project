@@ -1,5 +1,6 @@
 package com.example.managecoffeeapp_prm_project.ui;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,6 +9,7 @@ import android.view.View;
 import android.widget.PopupMenu;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -18,6 +20,7 @@ import com.example.managecoffeeapp_prm_project.adapter.NguoiDungAdapter;
 import com.example.managecoffeeapp_prm_project.dao.NguoiDungDAO;
 import com.example.managecoffeeapp_prm_project.interfaces.ItemNguoiDungOnClick;
 import com.example.managecoffeeapp_prm_project.model.NguoiDung;
+import com.example.managecoffeeapp_prm_project.utils.MyToast;
 
 public class NhanVienActivity extends AppCompatActivity {
     public static final String MA_NGUOI_DUNG = "maNguoiDung";
@@ -69,7 +72,7 @@ public class NhanVienActivity extends AppCompatActivity {
                                 openUpdateNhanVienActivity(nguoiDung);
                                 break;
                             case R.id.menu_delete:
-//                                deleteNhanVien(nguoiDung);
+                                deleteNhanVien(nguoiDung);
                                 break;
                             case R.id.menu_chitet:
                                 openChiTietNhanVienActivity(nguoiDung);
@@ -99,6 +102,30 @@ public class NhanVienActivity extends AppCompatActivity {
         intent.putExtra(MA_NGUOI_DUNG, nguoiDung.getMaNguoiDung());
         startActivity(intent);
         overridePendingTransition(R.anim.anim_in_right, R.anim.anim_out_left);
+    }
+
+    private void deleteNhanVien(NguoiDung nguoiDung) {
+        // Xoá nhân viên
+        AlertDialog.Builder builder = new AlertDialog.Builder(NhanVienActivity.this, R.style.AlertDialogTheme);
+        builder.setMessage("Xóa nhân viên " + nguoiDung.getHoVaTen() + "?");
+        builder.setPositiveButton("Xóa", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if (nguoiDungDAO.deleteNguoiDung(nguoiDung.getMaNguoiDung())) {
+                    MyToast.successful(NhanVienActivity.this, "Xóa thành công");
+                } else {
+                    MyToast.error(NhanVienActivity.this, "Xóa không thành công");
+                }
+                loadData();
+            }
+        });
+        builder.setNegativeButton("Hủy", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+            }
+        });
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     @Override

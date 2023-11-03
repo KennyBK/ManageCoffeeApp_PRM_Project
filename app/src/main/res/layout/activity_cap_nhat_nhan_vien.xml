@@ -48,7 +48,7 @@
                     android:fontFamily="@font/inter_bold"
                     android:text="Cập nhật nhân viên"
                     android:textAllCaps="true"
-                    android:textColor="@color/BrowPrimary"
+                    android:textColor="@color/GreenPrimary"
                     android:textSize="20sp"
                     tools:ignore="HardcodedText" />
 
@@ -56,7 +56,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/inter_regular"
-                    android:text="@string/link_aptcoffee"
+                    android:text="@string/link_managecoffee"
                     android:textAllCaps="false"
                     android:textColor="@color/BlackPrimary"
                     android:textSize="14sp" />
@@ -121,8 +121,8 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:boxStrokeColor="@color/BrowPrimary"
-                    app:hintTextColor="@color/BrowPrimary">
+                    app:boxStrokeColor="@color/GreenPrimary"
+                    app:hintTextColor="@color/GreenPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:focusable="false"
@@ -143,8 +143,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="15dp"
-                    app:boxStrokeColor="@color/BrowPrimary"
-                    app:hintTextColor="@color/BrowPrimary">
+                    app:boxStrokeColor="@color/GreenPrimary"
+                    app:hintTextColor="@color/GreenPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
@@ -164,8 +164,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="15dp"
-                    app:boxStrokeColor="@color/BrowPrimary"
-                    app:hintTextColor="@color/BrowPrimary">
+                    app:boxStrokeColor="@color/GreenPrimary"
+                    app:hintTextColor="@color/GreenPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/tieNgaySinh"
@@ -205,7 +205,7 @@
                             android:id="@+id/rdNam"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:buttonTint="@color/BrowPrimary"
+                            android:buttonTint="@color/GreenPrimary"
                             android:checked="true"
                             android:fontFamily="@font/inter_regular"
                             android:text="@string/nam"
@@ -217,7 +217,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginStart="10dp"
-                            android:buttonTint="@color/BrowPrimary"
+                            android:buttonTint="@color/GreenPrimary"
                             android:fontFamily="@font/inter_regular"
                             android:text="@string/nu"
                             android:textColor="@color/BlackPrimary"
@@ -230,8 +230,8 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:boxStrokeColor="@color/BrowPrimary"
-                    app:hintTextColor="@color/BrowPrimary">
+                    app:boxStrokeColor="@color/GreenPrimary"
+                    app:hintTextColor="@color/GreenPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
@@ -251,8 +251,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="15dp"
-                    app:boxStrokeColor="@color/BrowPrimary"
-                    app:hintTextColor="@color/BrowPrimary"
+                    app:boxStrokeColor="@color/GreenPrimary"
+                    app:hintTextColor="@color/GreenPrimary"
                     app:passwordToggleEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText
