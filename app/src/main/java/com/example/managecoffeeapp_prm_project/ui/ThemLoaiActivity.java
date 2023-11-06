@@ -126,14 +126,16 @@ public class ThemLoaiActivity extends AppCompatActivity implements View.OnClickL
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
-        int viewId = view.getId();
-
-        if (viewId == R.id.ivBack) {
-            onBackPressed();
-        } else if (viewId == R.id.ivPickImage) {
-            pickImage();
-        } else if (viewId == R.id.btnAdd) {
-            addProduct();
+        switch (view.getId()){
+            case R.id.ivBack:
+                onBackPressed();
+                break;
+            case R.id.ivPickImage:
+                pickImage();
+                break;
+            case R.id.btnAdd:
+                addProduct();
+                break;
         }
     }
 
