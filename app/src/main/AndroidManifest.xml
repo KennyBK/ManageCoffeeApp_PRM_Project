@@ -81,7 +81,11 @@
         </intent-filter>
         </activity>
         <activity
+<<<<<<< Updated upstream
             android:name=".ui.LoaiThucUongActivity"
+=======
+            android:name=".ui.ThucUongActivity"
+>>>>>>> Stashed changes
             android:exported="true">
 
             <intent-filter>
