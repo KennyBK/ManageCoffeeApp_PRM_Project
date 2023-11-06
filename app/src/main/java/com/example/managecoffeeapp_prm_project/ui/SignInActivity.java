@@ -20,7 +20,6 @@ import java.util.Objects;
 import com.example.managecoffeeapp_prm_project.MainActivity;
 import com.example.managecoffeeapp_prm_project.R;
 import com.example.managecoffeeapp_prm_project.dao.NguoiDungDAO;
-import com.example.managecoffeeapp_prm_project.notification.MyNotification;
 import com.example.managecoffeeapp_prm_project.utils.Loading;
 import com.example.managecoffeeapp_prm_project.utils.MyToast;
 
@@ -118,7 +117,6 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
             switch (statusLogin) {
                 case SUCCESSFUL: // Đăng nhập thành công
                     MyToast.successful(SignInActivity.this, "Đăng nhập thành công");
-                    MyNotification.getNotification(SignInActivity.this, "Đăng nhập hệ thống thành công");
                     break;
                 case FAILE: // Đăng nhập thất bại
                     MyToast.error(SignInActivity.this, "Đăng nhập thất bại");
