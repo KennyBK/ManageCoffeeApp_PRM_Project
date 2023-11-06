@@ -63,10 +63,16 @@
     </style>
 
     <style name="AlertDialogTheme" parent="Base.Theme.AppCompat.Light.Dialog.Alert">
-        <item name="colorAccent">@color/BluePrimary</item>
+        <item name="colorAccent">@color/GreenPrimary</item>
         <item name="fontFamily">@font/inter_regular</item>
         <item name="textAllCaps">false</item>
         <item name="android:textSize">16sp</item>
+        <item name="buttonBarNegativeButtonStyle">@style/MyAlertDialogButtonStyle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/MyAlertDialogButtonStyle</item>
+    </style>
+
+    <style name="MyAlertDialogButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
+        <item name="android:textColor">@color/GreenPrimary</item>
     </style>
 
     <style name="TranslucentStatusBar" parent="Theme.AppCompat.Light.NoActionBar">
