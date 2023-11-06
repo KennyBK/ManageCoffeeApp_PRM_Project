@@ -81,7 +81,7 @@
         </intent-filter>
         </activity>
         <activity
-            android:name=".ui.ThucUongActivity"
+            android:name=".ui.LoaiThucUongActivity"
             android:exported="true">
 
             <intent-filter>
