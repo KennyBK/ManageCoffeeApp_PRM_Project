@@ -76,12 +76,6 @@ public class HangHoaDAO {
 
     public boolean deleteHangHoa(String maHangHoa) {
         SQLiteDatabase sqLiteDatabase = coffeeDB.getWritableDatabase();
-
-        @SuppressLint("Recycle")
-        Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM HOADONCHITIET WHERE maHangHoa=?", new String[]{maHangHoa});
-        if (cursor.getCount() != 0) {
-            return false;
-        }
         int check = sqLiteDatabase.delete("HangHoa", "maHangHoa=?", new String[]{maHangHoa});
 
         return check > 0;
