@@ -24,6 +24,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import de.hdodenhof.circleimageview.CircleImageView;
 import com.example.managecoffeeapp_prm_project.R;
 import com.example.managecoffeeapp_prm_project.dao.NguoiDungDAO;
+import com.example.managecoffeeapp_prm_project.fragment.SettingFragment;
 import com.example.managecoffeeapp_prm_project.model.NguoiDung;
 import com.example.managecoffeeapp_prm_project.utils.MyToast;
 import com.example.managecoffeeapp_prm_project.utils.XDate;
@@ -79,8 +80,7 @@ public class ThietLapTaiKhoanActivity extends AppCompatActivity implements View.
 
     private NguoiDung getObjectNguoiDung() {
         Intent intent = getIntent();
-        String maNguoiDung = "admin";
-                //intent.getStringExtra(SettingFragment.MA_NGUOIDUNG);
+        String maNguoiDung = intent.getStringExtra(SettingFragment.MA_NGUOIDUNG);
         return nguoiDungDAO.getByMaNguoiDung(maNguoiDung);
     }
 

@@ -22,6 +22,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 
 import java.io.InputStream;
+import java.util.Objects;
 
 
 import de.hdodenhof.circleimageview.CircleImageView;
@@ -76,10 +77,10 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
                 openTLTKActivity();
                 break;
             case R.id.tvDoiMatKhau:
-
+                openDoiMatKhauAcitvity();
                 break;
             case R.id.tvDangXuat:
-
+                logout();
                 break;
         }
     }
@@ -111,8 +112,7 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
 
     private NguoiDung getNguoiDung() {
         // Lấy mã người dùng từ MainActivity theo fun(getKeyUser)
-        String maNguoiDung = "admin";
-        //Objects.requireNonNull(mainActivity).getKeyUser();
+        String maNguoiDung = Objects.requireNonNull(mainActivity).getKeyUser();
         return nguoiDungDAO.getByMaNguoiDung(maNguoiDung);
     }
 

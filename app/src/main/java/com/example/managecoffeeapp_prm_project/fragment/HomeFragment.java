@@ -111,8 +111,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     private NguoiDung getNguoiDung() {
         // Lấy mã người dùng từ MainActivity thông qua hàm getKeyUser
-        String maNguoiDung = "admin";
-                //Objects.requireNonNull(mainActivity).getKeyUser();
+        String maNguoiDung = Objects.requireNonNull(mainActivity).getKeyUser();
         // Lây đối tượng người dùng theo mã
         return nguoiDungDAO.getByMaNguoiDung(maNguoiDung);
     }

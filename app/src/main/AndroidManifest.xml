@@ -72,6 +72,14 @@
             android:name=".ui.ThucUongActivity"
             android:exported="false">
         </activity>
+        <activity
+            android:name=".ui.LoaiThucUongActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".ui.DoiMatKhauActivity"
+            android:exported="false">
+        </activity>
     </application>
 
 </manifest>

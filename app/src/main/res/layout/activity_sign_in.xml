@@ -49,7 +49,7 @@
                     android:fontFamily="@font/inter_regular"
                     android:gravity="center_horizontal"
                     android:text="@string/slogan_app"
-                    android:textColor="@color/BrowPrimary"
+                    android:textColor="@color/GreenPrimary"
                     android:textSize="20sp" />
             </LinearLayout>
 
@@ -85,7 +85,7 @@
                         android:hint="@string/ten_dang_nhap"
                         android:text="ADMIN"
                         android:inputType="textPersonName"
-                        android:textColor="@color/BlackPrimary"
+                        android:textColor="@color/GreenPrimary"
                         android:textSize="16sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
@@ -108,21 +108,9 @@
                         android:fontFamily="@font/inter_regular"
                         android:hint="@string/mat_khau"
                         android:inputType="textPassword"
-                        android:textColor="@color/BlackPrimary"
+                        android:textColor="@color/GreenPrimary"
                         android:textSize="16sp" />
                 </com.google.android.material.textfield.TextInputLayout>
-
-                <TextView
-                    android:id="@+id/tvQuenMatKhau"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="@font/inter_regular"
-                    android:gravity="center_vertical|end"
-                    android:text="@string/qun_mat_khau"
-                    android:textColor="@color/BrowPrimary"
-                    android:textSize="14sp" />
-
                 <Button
                     android:id="@+id/btnSignIn"
                     android:layout_width="match_parent"

@@ -21,7 +21,7 @@
     </style>
 
     <style name="AppStatusBarWhite" parent="Base.Theme.ManageCoffeeApp_PRM_Project">
-        <item name="android:statusBarColor">@color/WhitePrimary</item>
+        <item name="android:statusBarColor">@color/Green1Primary</item>
         <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
     </style>
 
@@ -46,7 +46,7 @@
 
     <!--  Theme Status Bar Gray -->
     <style name="AppStatusBarGray" parent="Base.Theme.ManageCoffeeApp_PRM_Project">
-        <item name="android:statusBarColor">@color/GrayPrimary</item>
+        <item name="android:statusBarColor">@color/GreenPrimary</item>
         <item name="android:windowLightStatusBar" tools:ignore="NewApi">true</item>
     </style>
 
