@@ -82,8 +82,8 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:boxStrokeColor="@color/BrowPrimary"
-                    app:hintTextColor="@color/BrowPrimary">
+                    app:boxStrokeColor="@color/GreenPrimary"
+                    app:hintTextColor="@color/GreenPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
@@ -103,8 +103,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="15dp"
-                    app:boxStrokeColor="@color/BrowPrimary"
-                    app:hintTextColor="@color/BrowPrimary">
+                    app:boxStrokeColor="@color/GreenPrimary"
+                    app:hintTextColor="@color/GreenPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
@@ -124,8 +124,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="15dp"
-                    app:boxStrokeColor="@color/BrowPrimary"
-                    app:hintTextColor="@color/BrowPrimary">
+                    app:boxStrokeColor="@color/GreenPrimary"
+                    app:hintTextColor="@color/GreenPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/tieNgaySinh"
@@ -190,8 +190,8 @@
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:boxStrokeColor="@color/BrowPrimary"
-                    app:hintTextColor="@color/BrowPrimary">
+                    app:boxStrokeColor="@color/GreenPrimary"
+                    app:hintTextColor="@color/GreenPrimary">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
@@ -211,8 +211,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="15dp"
-                    app:boxStrokeColor="@color/BrowPrimary"
-                    app:hintTextColor="@color/BrowPrimary"
+                    app:boxStrokeColor="@color/GreenPrimary"
+                    app:hintTextColor="@color/GreenPrimary"
                     app:passwordToggleEnabled="true">
 
                     <com.google.android.material.textfield.TextInputEditText

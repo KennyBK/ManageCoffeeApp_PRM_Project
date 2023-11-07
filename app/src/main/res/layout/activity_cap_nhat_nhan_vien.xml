@@ -133,7 +133,7 @@
                         android:fontFamily="@font/inter_regular"
                         android:hint="@string/ten_dang_nhap"
                         android:inputType="textPersonName"
-                        android:textColor="#919191"
+                        android:textColor="@color/BlackPrimary"
                         android:textSize="16sp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
