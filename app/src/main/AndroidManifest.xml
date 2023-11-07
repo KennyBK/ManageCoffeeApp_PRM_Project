@@ -13,21 +13,22 @@
         android:theme="@style/Base.Theme.ManageCoffeeApp_PRM_Project"
         tools:targetApi="31">
         <activity
-            android:name=".ui.ThietLapTaiKhoanActivity"
-            android:exported="false"
-            android:theme="@style/AppStatusBarGray">
-        </activity>
-
-        <activity
-            android:name=".MainActivity"
+            android:name=".ui.SignInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
-
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarGray" />
+        <activity
+            android:name=".ui.ThietLapTaiKhoanActivity"
+            android:exported="false"
+            android:theme="@style/AppStatusBarGray">
         </activity>
         <activity
             android:name=".ui.ThemNhanVienActivity"
@@ -54,7 +55,6 @@
             android:exported="false"
             android:theme="@style/AppStatusBarWhite">
         </activity>
-
         <activity
             android:name=".ui.ThemLoaiActivity"
             android:exported="false"
@@ -62,35 +62,15 @@
         </activity>
         <activity
             android:name=".ui.NhanVienActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
+            android:exported="false">
         </activity>
         <activity
             android:name=".ui.SignUpActivity"
             android:exported="false">
-
         </activity>
-
-        <activity
-            android:name=".ui.SignInActivity"
-            android:exported="false">
-        </activity>
-
         <activity
             android:name=".ui.ThucUongActivity"
-
-            android:exported="true">
-
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            android:exported="false">
         </activity>
     </application>
 

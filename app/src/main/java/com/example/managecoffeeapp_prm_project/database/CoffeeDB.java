@@ -8,7 +8,7 @@ import com.example.managecoffeeapp_prm_project.R;
 import com.example.managecoffeeapp_prm_project.utils.ImageToByte;
 
 public class CoffeeDB extends SQLiteOpenHelper {
-    public static final String DB_NAME = "APTCoffee";
+    public static final String DB_NAME = "Coffee";
     public static final int DB_VERSION = 1;
     public Context context;
 

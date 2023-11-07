@@ -29,7 +29,6 @@ import com.example.managecoffeeapp_prm_project.dao.HangHoaDAO;
 import com.example.managecoffeeapp_prm_project.dao.NguoiDungDAO;
 import com.example.managecoffeeapp_prm_project.model.HangHoa;
 import com.example.managecoffeeapp_prm_project.model.NguoiDung;
-import com.example.managecoffeeapp_prm_project.model.Photo;
 import com.example.managecoffeeapp_prm_project.ui.LoaiThucUongActivity;
 import com.example.managecoffeeapp_prm_project.ui.NhanVienActivity;
 import com.example.managecoffeeapp_prm_project.ui.ThucUongActivity;
@@ -96,7 +95,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         recyclerViewThucUong.setAdapter(adapter);
     }
 
-    @NonNull
 
 
     @SuppressLint("SetTextI18n")

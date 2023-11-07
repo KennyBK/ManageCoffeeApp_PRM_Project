@@ -3,6 +3,8 @@ package com.example.managecoffeeapp_prm_project.fragment;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
@@ -27,6 +29,8 @@ import com.example.managecoffeeapp_prm_project.MainActivity;
 import com.example.managecoffeeapp_prm_project.R;
 import com.example.managecoffeeapp_prm_project.dao.NguoiDungDAO;
 import com.example.managecoffeeapp_prm_project.model.NguoiDung;
+import com.example.managecoffeeapp_prm_project.ui.DoiMatKhauActivity;
+import com.example.managecoffeeapp_prm_project.ui.SignInActivity;
 import com.example.managecoffeeapp_prm_project.ui.ThietLapTaiKhoanActivity;
 import com.example.managecoffeeapp_prm_project.utils.ImageToByte;
 import com.example.managecoffeeapp_prm_project.utils.MyToast;
@@ -148,7 +152,38 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
         }
     }
 
+    private void openDoiMatKhauAcitvity() {
+        Intent intent = new Intent(getContext(), DoiMatKhauActivity.class);
+        intent.putExtra(MA_NGUOIDUNG, getNguoiDung().getMaNguoiDung());
+        startActivity(intent);
+        ((Activity) requireContext()).overridePendingTransition(R.anim.anim_in_right, R.anim.anim_out_left);
+    }
 
+    private void openSignInActivity() {
+        startActivity(new Intent(getContext(), SignInActivity.class));
+        ((Activity) requireContext()).overridePendingTransition(R.anim.anim_in_left, R.anim.anim_out_right);
+    }
+
+    private void logout() {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogTheme)
+                .setMessage("Bạn có muốn đăng xuất?")
+                .setPositiveButton("Đăng xuất", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        // Đăng xuất hệ thống
+                        openSignInActivity();
+                    }
+                })
+                .setNegativeButton("Huỷ", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                    }
+                });
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+    }
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {

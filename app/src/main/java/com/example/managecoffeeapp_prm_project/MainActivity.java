@@ -81,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         // Open fragment Home
+        super.onBackPressed();
         vp2Main.setCurrentItem(0, false);
         bnvMain.setSelectedItemId(R.id.menu_home);
     }
