@@ -27,15 +27,19 @@ public class HangHoaDAO {
         if (cursor.getCount() != 0) {
             cursor.moveToFirst();
             do {
-                HangHoa hangHoa = new HangHoa();
-                hangHoa.setMaHangHoa(cursor.getInt(cursor.getColumnIndex("maHangHoa")));
-                hangHoa.setTenHangHoa(cursor.getString(cursor.getColumnIndex("tenHangHoa")));
-                hangHoa.setHinhAnh(cursor.getBlob(cursor.getColumnIndex("hinhAnh")));
-                hangHoa.setGiaTien(cursor.getInt(cursor.getColumnIndex("giaTien")));
-                hangHoa.setMaLoai(cursor.getInt(cursor.getColumnIndex("maLoai")));
-                hangHoa.setTrangThai(cursor.getInt(cursor.getColumnIndex("trangThai")));
-                list.add(hangHoa);
-                Log.i("TAG", hangHoa.toString());
+                try{
+                    HangHoa hangHoa = new HangHoa();
+                    hangHoa.setMaHangHoa(cursor.getInt(cursor.getColumnIndex("maHangHoa")));
+                    hangHoa.setTenHangHoa(cursor.getString(cursor.getColumnIndex("tenHangHoa")));
+                    hangHoa.setHinhAnh(cursor.getBlob(cursor.getColumnIndex("hinhAnh")));
+                    hangHoa.setGiaTien(cursor.getInt(cursor.getColumnIndex("giaTien")));
+                    hangHoa.setMaLoai(cursor.getInt(cursor.getColumnIndex("maLoai")));
+                    hangHoa.setTrangThai(cursor.getInt(cursor.getColumnIndex("trangThai")));
+                    list.add(hangHoa);
+                    Log.i("TAG", hangHoa.toString());
+                }catch(Exception e){
+
+                }
             } while (cursor.moveToNext());
         }
 

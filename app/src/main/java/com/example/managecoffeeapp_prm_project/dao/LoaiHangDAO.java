@@ -24,15 +24,20 @@ public class LoaiHangDAO {
         ArrayList<LoaiHang> list = new ArrayList<>();
         SQLiteDatabase sqLiteDatabase = coffeeDB.getReadableDatabase();
         @SuppressLint("Recycle") Cursor cursor = sqLiteDatabase.rawQuery(sql, choose);
+        System.out.println(cursor.getCount());
         if (cursor.getCount() != 0) {
             cursor.moveToFirst();
             do {
-                LoaiHang loaiHang = new LoaiHang();
-                loaiHang.setMaLoai(cursor.getInt(cursor.getColumnIndex("maLoai")));
-                loaiHang.setTenLoai(cursor.getString(cursor.getColumnIndex("tenLoai")));
-                loaiHang.setHinhAnh(cursor.getBlob(cursor.getColumnIndex("hinhAnh")));
-                list.add(loaiHang);
-                Log.i("TAG", loaiHang.toString());
+                try{
+                    LoaiHang loaiHang = new LoaiHang();
+                    loaiHang.setMaLoai(cursor.getInt(cursor.getColumnIndex("maLoai")));
+                    loaiHang.setTenLoai(cursor.getString(cursor.getColumnIndex("tenLoai")));
+                    loaiHang.setHinhAnh(cursor.getBlob(cursor.getColumnIndex("hinhAnh")));
+                    list.add(loaiHang);
+                    Log.i("TAG", loaiHang.toString());
+                }catch (Exception e) {
+
+                }
             } while (cursor.moveToNext());
         }
 

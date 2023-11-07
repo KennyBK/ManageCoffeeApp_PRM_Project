@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                         break;
                     case R.id.menu_setting:
                         // Open fragment Setting
-                        vp2Main.setCurrentItem(3, false);
+                        vp2Main.setCurrentItem(2, false);
                         break;
                 }
                 return true;

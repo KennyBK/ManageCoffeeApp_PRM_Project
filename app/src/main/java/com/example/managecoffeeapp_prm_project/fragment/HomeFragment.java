@@ -59,7 +59,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         hangHoaDAO = new HangHoaDAO(getContext());
 
         welcomeUser();
-//        loadListThucUong();
+        loadListThucUong();
 
         return view;
     }
@@ -86,15 +86,15 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     }
 
-//    private void loadListThucUong() {
-//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
-//        recyclerViewThucUong.setLayoutManager(linearLayoutManager);
-//
-//
-//        ArrayList<HangHoa> listHangHoa = hangHoaDAO.getAll();
-//        ThucUongHomeFragmentAdapter adapter = new ThucUongHomeFragmentAdapter(listHangHoa);
-//        recyclerViewThucUong.setAdapter(adapter);
-//    }
+    private void loadListThucUong() {
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
+        recyclerViewThucUong.setLayoutManager(linearLayoutManager);
+
+
+        ArrayList<HangHoa> listHangHoa = hangHoaDAO.getAll();
+        ThucUongHomeFragmentAdapter adapter = new ThucUongHomeFragmentAdapter(listHangHoa);
+        recyclerViewThucUong.setAdapter(adapter);
+    }
 
     @NonNull
 
@@ -152,7 +152,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onResume() {
         super.onResume();
         welcomeUser();
-//        loadListThucUong();
+        loadListThucUong();
 
     }
 }
