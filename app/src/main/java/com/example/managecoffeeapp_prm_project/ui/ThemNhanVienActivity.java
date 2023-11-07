@@ -82,6 +82,10 @@ public class ThemNhanVienActivity extends AppCompatActivity implements View.OnCl
         String matKhau = getText(tilMatKhau);
         if (maNguoiDung.isEmpty() || hoVaTen.isEmpty() || ngaySinh.isEmpty() || email.isEmpty() || matKhau.isEmpty()) {
             MyToast.error(ThemNhanVienActivity.this, "Vui lòng nhập đầy đủ thông tin");
+        } else if (maNguoiDung.length() < 3) {
+            MyToast.error(ThemNhanVienActivity.this, "Tên đăng nhập phải có ít nhất 3 kí tự");
+        } else if (matKhau.length() < 8) {
+            MyToast.error(ThemNhanVienActivity.this, "Mật khẩu phải có ít nhất 8 kí tự");
         } else {
             try {
                 Date date = XDate.toDate(ngaySinh);
@@ -145,6 +149,8 @@ public class ThemNhanVienActivity extends AppCompatActivity implements View.OnCl
         }, year, month, day);
         datePickerDialog.show();
     }
+
+    
 
     private String getGender() {
         // Giới tính

@@ -24,6 +24,7 @@ import java.util.Objects;
 import de.hdodenhof.circleimageview.CircleImageView;
 import com.example.managecoffeeapp_prm_project.MainActivity;
 import com.example.managecoffeeapp_prm_project.R;
+import com.example.managecoffeeapp_prm_project.adapter.ThucUongHomeFragmentAdapter;
 import com.example.managecoffeeapp_prm_project.dao.HangHoaDAO;
 import com.example.managecoffeeapp_prm_project.dao.NguoiDungDAO;
 import com.example.managecoffeeapp_prm_project.model.HangHoa;
@@ -31,6 +32,7 @@ import com.example.managecoffeeapp_prm_project.model.NguoiDung;
 import com.example.managecoffeeapp_prm_project.model.Photo;
 import com.example.managecoffeeapp_prm_project.ui.LoaiThucUongActivity;
 import com.example.managecoffeeapp_prm_project.ui.NhanVienActivity;
+import com.example.managecoffeeapp_prm_project.ui.ThucUongActivity;
 import com.example.managecoffeeapp_prm_project.utils.MyToast;
 
 
@@ -57,35 +59,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         hangHoaDAO = new HangHoaDAO(getContext());
 
         welcomeUser();
+//        loadListThucUong();
 
-        autoRunSildeImage();
         return view;
     }
 
-    private void autoRunSildeImage() {
-        // Tự động chuyển ảnh trong SlideImage
-        handler = new Handler();
-        runnable = new Runnable() {
-            @Override
-            public void run() {
-                if(vpSlideImage.getCurrentItem() == getListImage().size() -1){
-                    vpSlideImage.setCurrentItem(0, false);
-                }else {
-                    vpSlideImage.setCurrentItem(vpSlideImage.getCurrentItem() + 1);
-                }
-            }
-        };
-        handler.postDelayed(runnable, 2000);
-
-        // Sự kiện Slide Image chuyển ảnh
-        vpSlideImage.registerOnPageChangeCallback(new ViewPager2.OnPageChangeCallback() {
-            @Override
-            public void onPageSelected(int position) {
-                super.onPageSelected(position);
-                handler.removeCallbacks(runnable);
-                handler.postDelayed(runnable, 2000);            }
-        });
-    }
 
 
     private void initView(View view) {
@@ -108,19 +86,18 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     }
 
-
+//    private void loadListThucUong() {
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext(), RecyclerView.HORIZONTAL, false);
+//        recyclerViewThucUong.setLayoutManager(linearLayoutManager);
+//
+//
+//        ArrayList<HangHoa> listHangHoa = hangHoaDAO.getAll();
+//        ThucUongHomeFragmentAdapter adapter = new ThucUongHomeFragmentAdapter(listHangHoa);
+//        recyclerViewThucUong.setAdapter(adapter);
+//    }
 
     @NonNull
-    private ArrayList<Photo> getListImage() {
-        ArrayList<Photo> list = new ArrayList<>();
-        list.add(new Photo(R.drawable.slide_image1));
-        list.add(new Photo(R.drawable.slide_image2));
-        list.add(new Photo(R.drawable.slide_image3));
-        list.add(new Photo(R.drawable.silde_image4));
-        list.add(new Photo(R.drawable.slide_image5));
 
-        return list;
-    }
 
     @SuppressLint("SetTextI18n")
     private void welcomeUser() {
@@ -154,7 +131,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.cardThucUong:
                 // Mở màng hình quản lý thức uống
-
+                startActivity(new Intent(getContext(), ThucUongActivity.class));
+                (requireActivity()).overridePendingTransition(R.anim.anim_in_right, R.anim.anim_out_left);
                 break;
             case R.id.cardNhanVien:
                 if (getNguoiDung().isAdmin()) {
@@ -174,6 +152,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public void onResume() {
         super.onResume();
         welcomeUser();
+//        loadListThucUong();
 
     }
 }
