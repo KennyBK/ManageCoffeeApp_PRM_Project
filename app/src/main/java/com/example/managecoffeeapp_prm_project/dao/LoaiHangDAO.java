@@ -38,6 +38,7 @@ public class LoaiHangDAO {
                 }catch (Exception e) {
 
                 }
+
             } while (cursor.moveToNext());
         }
 
