@@ -83,6 +83,7 @@ public class SuaLoaiActivity extends AppCompatActivity implements View.OnClickLi
             MyToast.error(SuaLoaiActivity.this, "Vui lòng nhập tên loại");
         } else {
             loaiHang.setTenLoai(tenLoai);
+            loaiHang.setHinhAnh(ImageToByte.imageViewToByte(this, ivHinhAnh));
             if (loaiHangDAO.updateLoaiHang(loaiHang)) {
                 MyToast.successful(SuaLoaiActivity.this, "Cập nhật thành công");
             } else {
@@ -133,14 +134,16 @@ public class SuaLoaiActivity extends AppCompatActivity implements View.OnClickLi
     @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
-        int viewId = view.getId();
-
-        if (viewId == R.id.ivBack) {
-            onBackPressed();
-        } else if (viewId == R.id.ivPickImage) {
-            pickImage();
-        } else if (viewId == R.id.btnUpdate) {
-            updateProduct();
+        switch (view.getId()){
+            case R.id.ivBack:
+                onBackPressed();
+                break;
+            case R.id.ivPickImage:
+                pickImage();
+                break;
+            case R.id.btnUpdate:
+                updateProduct();
+                break;
         }
     }
 
