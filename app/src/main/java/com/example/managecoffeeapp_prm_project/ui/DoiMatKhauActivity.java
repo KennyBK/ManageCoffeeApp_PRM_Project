@@ -105,7 +105,7 @@ public class DoiMatKhauActivity extends AppCompatActivity {
 
                     clearText();
                     // Khai báo buider
-                    AlertDialog.Builder builder = new AlertDialog.Builder(DoiMatKhauActivity.this, R.style.AlertDialogTheme);
+                    AlertDialog.Builder builder = new AlertDialog.Builder(DoiMatKhauActivity.this, R.style.AppCompatAlertDialogTheme);
                     // Gán thống báo
                     builder.setMessage("Quay lại màng hình đăng nhập?");
                     // Sự kiện đồng ý chuyển quan màng hình Đăng nhập

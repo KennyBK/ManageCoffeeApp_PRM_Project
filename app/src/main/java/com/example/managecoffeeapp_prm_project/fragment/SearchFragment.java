@@ -139,7 +139,12 @@ public class SearchFragment extends Fragment {
         }
 
         // Load dữ liệu cho danh sách người dùng
-        NguoiDungAdapter nguoiDungAdapter = new NguoiDungAdapter(listNguoiDung);
+        NguoiDungAdapter nguoiDungAdapter = new NguoiDungAdapter(listNguoiDung, new ItemNguoiDungOnClick() {
+            @Override
+            public void itemOclick(View view, NguoiDung nguoiDung) {
+
+            }
+        });
         listSearch.setAdapter(nguoiDungAdapter);
         /*
         * Kiểm tra số lượng danh sách người dùng
@@ -164,7 +169,12 @@ public class SearchFragment extends Fragment {
             }
         }
         // Load danh sách thức uống
-        ThucUongAdapter thucUongAdapter = new ThucUongAdapter(listHangHoa);
+        ThucUongAdapter thucUongAdapter = new ThucUongAdapter(listHangHoa, new ItemHangHoaOnClick() {
+            @Override
+            public void itemOclick(View view, HangHoa hangHoa) {
+
+            }
+        });
         /*
          * Kiểm tra số lượng danh sách hàng hoá
          * Nếu số lượng danh sách = 0: Hiện thị tvNone ẩn danh sách

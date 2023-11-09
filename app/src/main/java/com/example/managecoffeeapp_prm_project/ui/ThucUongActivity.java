@@ -139,7 +139,7 @@ public class ThucUongActivity extends AppCompatActivity {
     }
 
     private void deleteHangHoa(HangHoa hangHoa) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(ThucUongActivity.this, R.style.AlertDialogTheme);
+        AlertDialog.Builder builder = new AlertDialog.Builder(ThucUongActivity.this, R.style.AppCompatAlertDialogTheme);
         builder.setMessage("Bạn có muốn xoá loại " + hangHoa.getTenHangHoa() + "?");
         builder.setPositiveButton("Xoá", new DialogInterface.OnClickListener() {
             @Override

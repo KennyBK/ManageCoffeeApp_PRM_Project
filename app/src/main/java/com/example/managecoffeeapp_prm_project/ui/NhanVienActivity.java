@@ -106,7 +106,7 @@ public class NhanVienActivity extends AppCompatActivity {
 
     private void deleteNhanVien(NguoiDung nguoiDung) {
         // Xoá nhân viên
-        AlertDialog.Builder builder = new AlertDialog.Builder(NhanVienActivity.this, R.style.AlertDialogTheme);
+        AlertDialog.Builder builder = new AlertDialog.Builder(NhanVienActivity.this, R.style.AppCompatAlertDialogTheme);
         builder.setMessage("Xóa nhân viên " + nguoiDung.getHoVaTen() + "?");
         builder.setPositiveButton("Xóa", new DialogInterface.OnClickListener() {
             @Override

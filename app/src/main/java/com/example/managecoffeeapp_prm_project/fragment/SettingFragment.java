@@ -165,7 +165,7 @@ public class SettingFragment extends Fragment implements View.OnClickListener {
     }
 
     private void logout() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.AlertDialogTheme)
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext(), R.style.MaterialComponentsAlertDialogTheme)
                 .setMessage("Bạn có muốn đăng xuất?")
                 .setPositiveButton("Đăng xuất", new DialogInterface.OnClickListener() {
                     @Override
